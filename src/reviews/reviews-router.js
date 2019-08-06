@@ -8,7 +8,7 @@ const jsonBodyParser = express.json()
 
 reviewsRouter
   .route('/')
-  .post(requireAuth, jsonBodyParser, (req, res, next) => {
+  /*.post(requireAuth, jsonBodyParser, (req, res, next) => {
     const { thing_id, rating, text } = req.body
     const newReview = { thing_id, rating, text }
 
@@ -31,6 +31,6 @@ reviewsRouter
           .json(ReviewsService.serializeReview(review))
       })
       .catch(next)
-    })
+    })*/
 
 module.exports = reviewsRouter
